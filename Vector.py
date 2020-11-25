@@ -1,5 +1,3 @@
-import seqiter
-
 class Vector:
 #"""represent a vector in multidimensional space."""
 
