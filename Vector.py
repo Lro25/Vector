@@ -2,7 +2,7 @@ class Vector:
 #"""represent a vector in multidimensional space."""
 
     def __init__(self,d):        
-        """create d-dimensional vector of zeros."""
+        """create a vector from a list of dimension len(d)"""
         self._coords = d
 
     def __len__(self):
@@ -44,11 +44,12 @@ class Vector:
         result = Vector([0] * len(self))
         for j in range(len(self)):
             result[j] = self[j] * other[j]
+            return result
 
     def __neg__(self):
         result = Vector([0]*len(self))
-        for i in range(len(self)):
-        	result[i] = -self[i]
+        for j in range(len(self)):
+        	result[j] = -self[j]
         return result
 
 
