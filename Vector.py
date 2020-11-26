@@ -26,7 +26,7 @@ class Vector:
             result[j] = self[j] + other[j]
         return result
 
-    def __mul__(self,other):
+    def cross(self,other):
         if len(self) != 3:
             raise ValueError('Dimension must be 3')
         if len(self) != len(other):
@@ -37,6 +37,13 @@ class Vector:
             result[1] = self[2]*other[0] - self[0]*other[2]
             result[2] = self[0]*other[1] - self[1]*other[0]
             return result
+
+    def __mul__(self,other):
+        if len(self) != len(other:
+            raise ValueError('Dimensions must match'))
+        result = Vector([0] * len(self))
+        for j in range(len(self)):
+            result[j] = self[j] * other[j]
 
     def __neg__(self):
         result = Vector([0]*len(self))
