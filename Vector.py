@@ -39,8 +39,9 @@ class Vector:
             return result
 
     def __mul__(self,other):
-        if len(self) != len(other:
-            raise ValueError('Dimensions must match'))
+        """Dot product of two vectors"""
+        if len(self) != len(other):
+            raise ValueError('Dimensions must match')
         result = Vector([0] * len(self))
         for j in range(len(self)):
             result[j] = self[j] * other[j]
